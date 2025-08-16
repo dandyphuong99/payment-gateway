@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class SellerPaymentApi extends Model
+class PaymentConnection extends Model
 {
     protected $fillable = [
         'user_id',
@@ -25,10 +25,5 @@ class SellerPaymentApi extends Model
     {
         return $this->belongsTo(PaymentProvider::class, 'provider_id');
     }
-
-    // public function paymentMethod(): BelongsTo
-    // {
-    //     return $this->belongsTo(PaymentMethod::class, 'payment_method_id');
-    // }
 
 }

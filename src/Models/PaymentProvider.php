@@ -13,8 +13,8 @@ class PaymentProvider extends Model
         'description'
     ];
 
-    public function sellerApis(): HasMany
+    public function paymentConnections(): HasMany
     {
-        return $this->hasMany(SellerPaymentApi::class, 'provider_id');
+        return $this->hasMany(PaymentConnection::class, 'provider_id');
     }
 }
