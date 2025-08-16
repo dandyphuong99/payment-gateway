@@ -1,0 +1,14 @@
+{
+    "name": "dandyphuong99/payment-gateway",
+    "description": "Multi payment gateway for Laravel",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Dandyphuong99\\PaymentGateway\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^12.0"
+    }
+}
