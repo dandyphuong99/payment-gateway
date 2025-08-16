@@ -7,6 +7,17 @@ You can install the package via composer:
 ```bash
 composer require dandyphuong99/payment-gateway:dev-main
 ```
+Create tables:
+
+```bash
+php artisan migrate --path=vendor/dandyphuong99/payment-gateway/database/migrations
+```
+
+Seeder:
+
+```bash
+php artisan db:seed --class='Dandyphuong99\PaymentGateway\Database\Seeders\PaymentProvidersSeeder
+```
 
 ## Usage
 
@@ -39,4 +50,5 @@ Please email me at dandyphuong99@gmail.com for any security vulnerabilities.
 
 - [dandyphuong99](https://github.com/dandyphuong99)
 - All other contributors
+
 
