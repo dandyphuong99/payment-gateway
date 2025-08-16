@@ -3,6 +3,7 @@
 namespace Dandyphuong99\PaymentGateway\Models;
 
 use App\Models\User;
+use App\Models\PaymentMethod;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -23,6 +24,11 @@ class PaymentConnection extends Model
     public function provider(): BelongsTo
     {
         return $this->belongsTo(PaymentProvider::class, 'provider_id');
+    }
+
+    public function paymentMethods()
+    {
+        return $this->hasMany(PaymentMethod::class);
     }
 
 }
