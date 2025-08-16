@@ -4,7 +4,6 @@ namespace Dandyphuong99\PaymentGateway;
 
 use Dandyphuong99\PaymentGateway\Contracts\PaymentGatewayInterface;
 use Dandyphuong99\PaymentGateway\Providers\SepayGateway;
-use Dandyphuong99\PaymentGateway\Providers\DVSteamGateway;
 
 class PaymentGatewayFactory
 {

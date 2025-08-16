@@ -7,6 +7,11 @@
             "Dandyphuong99\\PaymentGateway\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
     "require": {
         "php": "^8.1",
         "laravel/framework": "^12.0"
