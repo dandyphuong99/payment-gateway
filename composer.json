@@ -7,6 +7,11 @@
             "Dandyphuong99\\PaymentGateway\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Dandyphuong99\\PaymentGateway\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
     "extra": {
         "laravel": {
             "dont-discover": []
