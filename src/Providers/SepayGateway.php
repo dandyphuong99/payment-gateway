@@ -9,13 +9,14 @@ class SepayGateway implements PaymentGatewayInterface
 {
     public function __construct(private string $token) {}
 
-    public function listTransactions(string $accountNumber, float|int $amount, string $dateFrom): array
+    public function listTransactions(string $accountNumber, int $amount, string $dateFrom, int $limit = 100): array
     {
         $response = Http::withToken($this->token)
+            ->acceptJson()
             ->get('https://my.sepay.vn/userapi/transactions/list', [
                 'account_number' => $accountNumber,
-                'amount_in' => $amount,
-                'from' => $dateFrom,
+                'transaction_date_min' => $dateFrom,
+                'limit' => $limit
             ]);
 
         return $response->json('transactions') ?? [];
